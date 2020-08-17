@@ -1,93 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <style>
-        html,body,.wrapper {
-            height: 100%;
-        }
-        body {
-            font-family: 'Old Standard TT', serif;
-            margin: 0;
-        }
-        .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .app {
-            width: 800px;
-            height: 500px;
-            border: solid black 1px;
-        }
-        #settings {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 42px;
-            height: 42px;
-        }
-
-        .head {
-            display: flex;
-            height: 72px;
-            border-bottom: 1px solid black;
-        }
-
-        .dialog {
-            height: calc(100% - 72px);
-            width: 70%;
-            border-right: 1px solid black;
-        }
-
-        .head__login {
-            line-height: 72px;
-            margin: 0 0 0 1rem;
-        }
-
-        .head__dialogs {
-            margin-left: auto;
-            width: calc(30% - 1px);
-            border-left: 1px solid black;
-            font-size: 1.5rem;
-            line-height: 72px;
-        }
-
-        .head__dialogs__sign {
-            text-align: center;
-            margin: 0;
-        }
-
-        main {
-            /*display: flex;*/
-        }
-
-
-
-    </style>
+    <title>Сдача работы</title>
 </head>
 <body>
-<img src="static/cog.svg" alt="Настройки" id="settings">
-<div class="wrapper">
-    <div class="app">
-        <div class="head">
-            <img src="https://dummyimage.com/72/72" alt="">
-            <h2 class="head__login">Имя Фамилия</h2>
-            <div class="head__dialogs">
-               <h2 class="head__dialogs__sign">Диалоги</h2>
-            </div>
-        </div>
-
-            <div class="dialog"></div>
-            <div class="contacts"></div>
-        <div class="footer"></div>
-
-    </div>
-</div>
+<h1>Страницы</h1>
+<ul style="font-size: 1.25rem;">
+    <li><a href="404.html">404</a></li>
+    <li><a href="500.html">500</a></li>
+    <li><a href="chat.html">chat</a></li>
+    <li><a href="login.html">login</a></li>
+    <li><a href="settings.html">settings</a></li>
+    <li><a href="signup.html">signup</a></li>
+</ul>
 </body>
 </html>
