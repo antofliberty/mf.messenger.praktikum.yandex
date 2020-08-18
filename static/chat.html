@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <style>
+        html,body,.wrapper {
+            height: 100%;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app {
+            width: 800px;
+            height: 600px;
+            border: solid black 1px;
+        }
+        #settings {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 42px;
+            height: 42px;
+        }
+
+        .head {
+            display: flex;
+            height: 72px;
+            border-bottom: 1px solid black;
+        }
+
+        .dialog {
+            /*border-right: 1px solid black;*/
+            overflow-y:scroll;
+            position:relative;
+            text-align: right;
+            height: 484px;
+        }
+
+        .head__login {
+            line-height: 72px;
+            margin: 0 0 0 1rem;
+        }
+
+        .head__dialogs {
+            margin-left: auto;
+            width: calc(30% - 1px);
+            /*border-left: 1px solid black;*/
+            font-size: 1.5rem;
+            line-height: 72px;
+        }
+
+        .head__dialogs__sign {
+            text-align: center;
+            margin: 0;
+        }
+
+        main {
+            height: calc(100% - 72px - 50px);
+            overflow-y: scroll;
+
+        }
+        .contacts {
+            height: 527px;
+            overflow-y: scroll;
+        }
+
+        .dialog__message {
+           padding: 10px 20px 0 0;
+        }
+
+        .dialog__message--opponent {
+            background: #eee;
+        }
+
+        .dialog__message__author {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #777;
+            font-size: small;
+            font-weight: bold;
+        }
+        .dialog__message__author--opponent {
+            color: red;
+        }
+
+        .dialog__message__content {
+            margin-top: 5px;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+        }
+
+        .contact {
+            height: 40px;
+            display: flex;
+        }
+
+        .contact--even {
+            background: #eee;
+        }
+
+        .dialog__tools {
+            width: 100%;
+            height:50px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<img src="static/cog.svg" alt="Настройки" id="settings">
+<div class="wrapper">
+    <div class="app">
+        <div class="head">
+            <img src="https://dummyimage.com/72/72" alt="">
+            <h2 class="head__login">Имя Фамилия</h2>
+            <div class="head__dialogs">
+               <h2 class="head__dialogs__sign">Диалоги</h2>
+            </div>
+        </div>
+        <div>
+<div style="float:left; width:70%">
+        <div class="dialog">
+
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+                <div class="dialog__message">
+                    <p class="dialog__message__author">Вы</p>
+                    <p class="dialog__message__content">Привет</p>
+                </div>
+                <div class="dialog__message dialog__message--opponent">
+                    <p class="dialog__message__author dialog__message__author--opponent">Вася</p>
+                    <p class="dialog__message__content">Привет!</p>
+                </div>
+
+            </div>
+        <div class="dialog__tools">
+            <div style="padding: 5px;display: flex;">
+                <img src="static/skrepka.svg" width="30px" alt="">
+                <input type="text" style="width: 80%;margin: 0 7px;">
+                <button>Отправить</button>
+            </div>
+        </div>
+</div>
+        <div style="float:right; width: 30%">
+
+            <div class="contacts">
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=A" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=B" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=C" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=D" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=E" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=F" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=G" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=H" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=I" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=J" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=K" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+<div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=J" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=K" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+<div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=J" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=K" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+<div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=J" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=K" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+<div class="contact">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=J" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+                <div class="contact contact--even">
+                    <div>
+                        <img src="https://dummyimage.com/40x40/777/fff&text=K" alt="Аватарка">
+                    </div>
+                    <span style="line-height: 40px;">&nbsp;Логин</span>
+                </div>
+
+
+            </div>
+
+        </div>
+        </div>
+<!--        <div class="dialog__tools"></div>-->
+
+
+
+
+        <div class="footer"></div>
+
+    </div>
+</div>
+</body>
+</html>
