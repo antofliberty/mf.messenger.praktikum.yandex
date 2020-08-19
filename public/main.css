@@ -1,0 +1,212 @@
+
+#login {
+    padding: 20px;
+    width: 420px;
+    /*height: 350px;*/
+    /*border: solid black 1px;*/
+    font-size: 1.25rem;
+}
+.login__sign {
+    margin-top: 0;
+    text-align: center;
+}
+.login-form__input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+.login-form {
+
+}
+.login-form__btn__wrapper {
+    text-align: center;
+}
+
+
+
+
+
+
+#settings {
+    padding: 20px;
+    width: 420px;
+    /*height: 350px;*/
+    border: solid black 1px;
+    font-size: 1.25rem;
+}
+.settings__title {
+    text-align: center;
+}
+.settings__body {
+    display: flex;
+}
+.settings__body__profile{
+    margin-left: 20px;
+    width: 100%;
+}
+.setting__logout-btn {
+    text-align: right;
+}
+.setting__logout-btn a {
+    color: red;
+}
+
+
+
+
+
+.app {
+    width: 800px;
+    height: 600px;
+    border: solid black 1px;
+}
+#settings-cog {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+}
+
+.head {
+    display: flex;
+    height: 72px;
+    border-bottom: 1px solid black;
+}
+
+.dialog {
+    /*border-right: 1px solid black;*/
+    overflow-y:scroll;
+    position:relative;
+    text-align: right;
+    height: 484px;
+}
+
+.head__login {
+    line-height: 72px;
+    margin: 0 0 0 1rem;
+}
+
+.head__dialogs {
+    margin-left: auto;
+    width: calc(30% - 1px);
+    /*border-left: 1px solid black;*/
+    font-size: 1.5rem;
+    line-height: 72px;
+}
+
+.head__dialogs__sign {
+    text-align: center;
+    margin: 0;
+}
+
+main {
+    height: calc(100% - 72px - 50px);
+    overflow-y: scroll;
+
+}
+.contacts {
+    height: 527px;
+    overflow-y: scroll;
+}
+
+.dialog__message {
+    padding: 10px 20px 0 0;
+}
+
+.dialog__message--opponent {
+    background: #eee;
+}
+
+.dialog__message__author {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #777;
+    font-size: small;
+    font-weight: bold;
+}
+.dialog__message__author--opponent {
+    color: red;
+}
+
+.dialog__message__content {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.contact {
+    height: 40px;
+    display: flex;
+}
+
+.contact--even {
+    background: #eee;
+}
+
+.dialog__tools {
+    width: 100%;
+    height:50px;
+}
+
+
+
+#signup {
+    padding: 20px;
+    width: 420px;
+    /*height: 350px;*/
+    /*border: solid black 1px;*/
+    font-size: 1.25rem;
+}
+.signup__sign {
+    margin-top: 0;
+    text-align: center;
+}
+.signup-form__input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+.signup-form {
+
+}
+.signup-form__btn__wrapper {
+    text-align: center;
+}
+
+
+
+
+/******************** HELPERS ***************/
+
+.text-left {
+    text-align: left!important;
+}
+.text-right {
+    text-align: right!important;
+}
+
+.float-left {
+    float: left!important;
+}
+
+.float-right {
+    float: right!important;
+}
+
+.mt-0 {
+    margin-top: 0!important;
+}
+
+.mb-0 {
+    margin-bottom: 0!important;
+}
+
+.m-0 {
+    margin: 0!important;
+}
+
