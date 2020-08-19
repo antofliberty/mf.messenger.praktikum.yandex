@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-// Все файлы и так лежат в нужной директории, по сути весь проект это статика
+// Все файлы и так лежат в нужной директории, по сути весь проект это статика. Я ее настроил как сказано в задании "Настройте Node.JS сервер на express с раздачей статики — файла index.html."
 app.use('/', express.static(__dirname + '/public/'))
 
 // app.get('/', function(req, res) {
