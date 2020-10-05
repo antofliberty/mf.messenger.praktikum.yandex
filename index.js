@@ -19,17 +19,17 @@ app.use('/', express.static(__dirname + '/public/'))
 // });
 //
 // app.get('/chat', function(req, res) {
-//     res.sendfile('public/chat.html');
+//     res.sendfile('public/index.html');
 // });
 //
 // app.get('/login', function(req, res) {
-//     res.sendfile('public/login.html');
+//     res.sendfile('public/index.html');
 // });
 // app.get('/signup', function(req, res) {
-//     res.sendfile('public/signup.html');
+//     res.sendfile('public/index.html');
 // });
 // app.get('/settings', function(req, res) {
-//     res.sendfile('public/settings.html');
+//     res.sendfile('public/index.html');
 // });
 
 app.listen(port, () => {
