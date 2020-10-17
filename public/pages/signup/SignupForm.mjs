@@ -1,5 +1,5 @@
 import SignupFormTemplate from "./SignupForm.tmpl.mjs"
-import ReusableButton from '../reusable/ReusableButton.tmpl.mjs'
+import ReusableButton from '../../components/Button/Button.tmpl.mjs'
 
 let btn = Handlebars.compile(ReusableButton)
 let template = Handlebars.compile(SignupFormTemplate);
