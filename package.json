@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js",
-    "publish": "git push -u origin deploy"
+    "publish": "git push -u origin deploy",
+    "compile": "tsc --p ./",
+    "compile-styles": "sass public/static/css/index.scss public/static/css/index.css",
+    "watch-styles": "sass --watch public/static/css/index.scss public/static/css/index.css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,8 @@
   },
   "homepage": "https://github.com/antofliberty/mf.messenger.praktikum.yandex#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sass": "^1.27.0",
+    "typescript": "^4.0.3"
   }
 }

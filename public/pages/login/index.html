@@ -6,9 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Вход</title>
-    <link rel="stylesheet" href="/static/flex-center.css">
-    <link rel="stylesheet" href="/static/theme.css">
-    <link rel="stylesheet" href="/static/main.css">
+<!--    <link rel="stylesheet" href="/static/flex-center.css">-->
+<!--    <link rel="stylesheet" href="/static/theme.css">-->
+<!--    <link rel="stylesheet" href="/static/main.css">-->
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
 <main id="app">
@@ -17,41 +18,8 @@
 <script type="module">
 import LoginForm from './LoginForm.mjs'
 </script>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-
-        function validate() {
-
-        }
-
-        let form = document.getElementsByTagName('form')[0]
-        form.onsubmit = function (e) {
-            e.preventDefault();
-            validate()
-        }
-
-        let email = document.querySelector("input[type=email]")
-
-        email.onfocus = function () {
-            // email.style.border = "2px solid red"
-            email.placeholder = "Ваш email"
-
-
-        }
-
-        email.onblur = function () {
-            if (email.value.match("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
-                console.log('email')
-                email.style.border = "none"
-            } else {
-                console.log("not email")
-                email.placeholder = "Неправильный email"
-                email.style.border = "2px solid red"
-            }
-        }
-
-
-    });
+<script type="module">
+    import FormValidation from "/utils/FormValidation/FormValidation.js"
 </script>
 </body>
 </html>
