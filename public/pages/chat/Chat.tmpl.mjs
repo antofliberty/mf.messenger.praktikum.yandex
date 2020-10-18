@@ -9,7 +9,7 @@ export const chat = `
                         <p class="dialog__message__author {{#if (isNotYou this.author)}}dialog__message__author--opponent{{/if}}">
                             {{this.author}}
                         </p>
-                        <p class="dialog__message__content">{{this.message}}</p>
+                        <p class="dialog__message__content {{#if (isNotYou this.author)}}dialog__message__content--opponent{{/if}}">{{this.message}}</p>
                     </div>
                 {{/each}}
                 </div>
@@ -21,7 +21,7 @@ export const chat = `
                     </div>
                 </div>
             </div>
-            <div style="float:right; width: 30%">
+            <div style="float:right; width: 29.85%; border-left: 1px solid #454138b0;">
                 <div class="contacts">
                     {{#each contacts}}
                         <div class="contact">

@@ -1,8 +1,23 @@
 {
-  "noImplicitAny": true,
-  "noUnusedLocals": true,
-  "noUnusedParameters": true,
-  "alwaysStrict": true,
-  "sourceMap": true,
-  "strictNullChecks": true
+  "compilerOptions": {
+    "target": "es5",
+    "module": "ESNext",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "outDir": "./dist",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "strictNullChecks": true
+  }
 }

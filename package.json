@@ -8,8 +8,8 @@
     "dev": "node index.js",
     "publish": "git push -u origin deploy",
     "compile": "tsc --p ./",
-    "compile-styles": "sass public/static/css/index.scss public/static/css/index.css",
-    "watch-styles": "sass --watch public/static/css/index.scss public/static/css/index.css"
+    "compile-styles": "sass src/css/index.scss public/static/css/index.css",
+    "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css"
   },
   "repository": {
     "type": "git",

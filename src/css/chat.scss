@@ -1,7 +1,7 @@
 .app {
   width: 800px;
   height: 600px;
-  border: solid black 1px;
+  border: solid #454138b0 1px;
 }
 #settings-cog {
   position: absolute;
@@ -14,7 +14,7 @@
 .head {
   display: flex;
   height: 72px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #454138b0;
 }
 
 .dialog {
@@ -44,7 +44,8 @@
 }
 
 main {
-  height: calc(100% - 72px - 50px);
+  //height: calc(100% - 72px - 50px);
+  height: 100%;
   overflow-y: scroll;
 
 }
@@ -58,7 +59,7 @@ main {
 }
 
 .dialog__message--opponent {
-  background: #eee;
+  background: #454138b0;
 }
 
 .dialog__message__author {
@@ -69,13 +70,17 @@ main {
   font-weight: bold;
 }
 .dialog__message__author--opponent {
-  color: red;
+  color: white;
 }
 
 .dialog__message__content {
   margin-top: 5px;
   margin-bottom: 0;
   padding-bottom: 10px;
+}
+
+.dialog__message__content--opponent {
+  color:white;
 }
 
 .contact {
