@@ -1,5 +1,5 @@
 import ChatTemplate from './Chat.tmpl.mjs'
-import HeadTemplate from "./head/ChatHead.tmpl.mjs"
+import HeadTemplate from "./ChatHead.tmpl.mjs"
 
 Handlebars.registerHelper('isNotYou', function (value) {
     return value !== "Вы";
