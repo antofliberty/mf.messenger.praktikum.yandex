@@ -1,13 +1,14 @@
-import LoginFormTemplate from "./LoginForm.tmpl.mjs"
-import ReusableButton from '../../components/Button/Button.tmpl.mjs'
+import LoginFormTemplate from "./LoginForm.tmpl"
+import ReusableButton from '../../components/button/Button.tmpl'
 
 let btn = Handlebars.compile(ReusableButton)
 let template = Handlebars.compile(LoginFormTemplate);
 
 
 const root = document.getElementById("app");
+// @ts-ignore
 root.innerHTML = template({
-    LoginButton: btn({href:"#", title:'Войти'})
+    LoginButton: btn({title:'Войти'})
 })
 
 

@@ -18,6 +18,7 @@
     "noImplicitAny": true,
     "alwaysStrict": true,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "types": ["handlebars"]
   }
 }

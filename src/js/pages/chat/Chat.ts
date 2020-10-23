@@ -1,5 +1,6 @@
-import ChatTemplate from './Chat.tmpl.mjs'
-import HeadTemplate from "./ChatHead.tmpl.mjs"
+import ChatTemplate from './Chat.tmpl'
+import HeadTemplate from "./ChatHead.tmpl"
+
 
 Handlebars.registerHelper('isNotYou', function (value) {
     return value !== "Вы";
@@ -28,6 +29,7 @@ let messages = [
 ]
 
 const root = document.getElementById("app");
+// @ts-ignore
 root.innerHTML = template({
     head: head({
         login: data.user

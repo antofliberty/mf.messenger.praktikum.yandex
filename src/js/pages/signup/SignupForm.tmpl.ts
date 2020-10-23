@@ -6,7 +6,7 @@ export const SignupFormTemplate = `
             <input class="signup-form__input" type="email" autocomplete="username" placeholder="Ваш email">
             <input class="signup-form__input" type="password" autocomplete="new-password" placeholder="Придумайте пароль">
             <input class="signup-form__input" type="password" autocomplete="new-password" name="password2" placeholder="Пароль (еще раз)">
-            {{{ SignupButton }}}
+            <div class="button-wrapper">{{{ SignupButton }}}</div>
         </form>
     </div>
 </div>

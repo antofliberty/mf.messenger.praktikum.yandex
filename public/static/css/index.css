@@ -37,9 +37,20 @@ a {
   color: #454138;
 }
 
-.a-button-wrapper {
+.button-wrapper {
   margin: 5px 0;
   text-align: center;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  background-color: #454138;
+  color: white;
 }
 
 #login {
@@ -242,6 +253,10 @@ main {
 
 .m-0 {
   margin: 0 !important;
+}
+
+.mx-auto {
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=index.css.map */

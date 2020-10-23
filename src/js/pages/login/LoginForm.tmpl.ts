@@ -5,7 +5,7 @@ export const LoginFormTemplate = `
         <form id="login-form" action="#">
             <input class="login-form__input" type="email" placeholder="Ваш email" autocomplete="email">
             <input class="login-form__input" type="password" placeholder="Пароль" autocomplete="password">
-             {{{LoginButton}}}
+            <div class="button-wrapper">{{{LoginButton}}}</div>
         </form>
     </div>
 </div>
