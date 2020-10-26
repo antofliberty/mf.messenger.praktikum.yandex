@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "node index.js",
     "publish": "git push -u origin deploy",
-    "compile": "tsc --p ./",
+    "compile-js": "tsc --p ./ | rsync -a dist/src/js/pages/ public/pages | rsync -a dist/src/js/components/ public/components",
     "compile-styles": "sass src/css/index.scss public/static/css/index.css",
-    "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css",
-    "mv-js": "mv dist/src/js/pages public/pages"
+    "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css"
+
   },
   "repository": {
     "type": "git",
