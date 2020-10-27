@@ -5,19 +5,24 @@
   border: solid #454138b0 1px;
   font-size: 1.25rem;
 }
+
 .settings__title {
   text-align: center;
 }
+
 .settings__body {
   display: flex;
 }
+
 .settings__body__profile{
   margin-left: 20px;
   width: 100%;
 }
+
 .setting__logout-btn {
   text-align: right;
 }
+
 .setting__logout-btn a {
   color: red;
 }

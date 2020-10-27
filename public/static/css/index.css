@@ -53,11 +53,6 @@ button {
   color: white;
 }
 
-label {
-  font-size: 10px;
-  color: red;
-}
-
 #login {
   padding: 20px;
   width: 420px;
@@ -136,7 +131,7 @@ label {
 
 .head__login {
   line-height: 72px;
-  margin: 0 0 0 1rem;
+  margin-left: 1rem;
 }
 
 .head__dialogs {
