@@ -1,4 +1,4 @@
-import SettingsTemplate from "./Settings.tmpl";
+import SettingsTemplate from "./Settings.tmpl.js";
 var template = Handlebars.compile(SettingsTemplate);
 var root = document.getElementById("app");
 // @ts-ignore

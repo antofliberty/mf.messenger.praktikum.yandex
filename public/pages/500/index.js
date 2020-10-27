@@ -1,4 +1,4 @@
-import Template500 from "./Template500.tmpl";
+import Template500 from "./Template500.tmpl.js";
 var template = Handlebars.compile(Template500);
 var root = document.getElementById("app");
 // @ts-ignore

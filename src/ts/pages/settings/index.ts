@@ -1,4 +1,4 @@
-import SettingsTemplate from "./Settings.tmpl";
+import SettingsTemplate from "./Settings.tmpl.js";
 
 
 let template = Handlebars.compile(SettingsTemplate);

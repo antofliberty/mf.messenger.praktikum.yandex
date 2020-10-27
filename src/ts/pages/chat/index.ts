@@ -1,5 +1,5 @@
-import ChatTemplate from './Chat.tmpl'
-import HeadTemplate from "./ChatHead.tmpl"
+import ChatTemplate from "./Chat.tmpl.js";
+import HeadTemplate from "./ChatHead.tmpl.js";
 
 
 Handlebars.registerHelper('isNotYou', function (value) {
@@ -26,7 +26,7 @@ let messages = [
         author: "Вы",
         message: "321"
     },
-]
+];
 
 const root = document.getElementById("app");
 // @ts-ignore

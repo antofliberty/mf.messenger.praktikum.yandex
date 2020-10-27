@@ -1,4 +1,4 @@
-import Template500 from "./Template500.tmpl";
+import Template500 from "./Template500.tmpl.js";
 
 let template = Handlebars.compile(Template500);
 

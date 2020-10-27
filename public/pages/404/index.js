@@ -1,4 +1,4 @@
-import Template404 from "./Template404";
+import Template404 from "./Template404.js";
 // import Handlebars from 'handlebars'
 // @ts-ignore
 var template = Handlebars.compile(Template404);
