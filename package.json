@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "node index.js",
     "publish": "git push -u origin deploy",
-    "compile-js": "tsc --p ./ | rsync -a dist/src/js/pages/ public/pages | rsync -a dist/src/js/components/ public/components",
+    "compile-js": "tsc --p ./ | rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components",
+    "mv-js": "rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components",
     "compile-styles": "sass src/css/index.scss public/static/css/index.css",
-    "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css"
-
+    "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css",
+    "watch-js": "./node_modules/.bin/tsc-watch --onSuccess \"npm run mv-js\""
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "express": "4.17.1",
     "handlebars": "4.7.6",
     "sass": "1.27.0",
+    "tsc-watch": "4.2.9",
     "typescript": "4.0.3"
   }
 }

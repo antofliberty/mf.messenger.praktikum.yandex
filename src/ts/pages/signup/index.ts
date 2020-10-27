@@ -6,6 +6,7 @@ let template = Handlebars.compile(SignupFormTemplate);
 
 
 const root = document.getElementById("app");
+// @ts-ignore
 root.innerHTML = template({
     SignupButton: btn({href:"#", title:'Зарегистрироваться'})
 })

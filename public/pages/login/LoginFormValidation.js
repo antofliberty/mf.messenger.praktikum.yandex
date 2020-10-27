@@ -6,8 +6,6 @@ export default document.addEventListener('DOMContentLoaded', function () {
     form.onsubmit = validate;
     var email = fields[0];
     var password = fields[1];
-    var emailValue = email.value;
-    var passwordValue = password.value;
     email.onblur = validateEmail;
     password.onblur = validatePassword;
     email.onfocus = reset;
@@ -19,43 +17,36 @@ export default document.addEventListener('DOMContentLoaded', function () {
         if (isEmailValid && isPasswordValid) {
             form.submit();
         }
-        if (!isEmailValid) {
-            makeRed(email);
-        }
-        if (!isPasswordValid) {
-            makeRed(password);
-        }
     }
-    function validateEmail() {
+    function validateEmail(e) {
+        var emailValue = email.value;
         var match = Boolean(emailValue.match("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\\])"));
+        console.log(match);
         if (match) {
-            reset();
+            reset(e);
         }
         else {
-            makeRed();
+            makeRed(e);
         }
         return match;
     }
-    function validatePassword() {
-        var match = Boolean(passwordValue.match("^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"));
+    function validatePassword(e) {
+        var passwordValue = password.value;
+        var match = Boolean(passwordValue.match("(?=^.{6,}$)"));
         if (match) {
-            reset();
+            reset(e);
         }
         else {
-            makeRed();
+            makeRed(e);
         }
         return match;
     }
-    function makeRed(e, el) {
-        if (e)
-            el = e.target;
-        // @ts-ignore
+    function makeRed(e) {
+        var el = e.target;
         el.style.border = "1px solid red";
     }
-    function reset(e, el) {
-        if (e)
-            el = e.target;
-        // @ts-ignore
+    function reset(e) {
+        var el = e.target;
         el.style.border = "none";
     }
 });

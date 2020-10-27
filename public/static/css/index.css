@@ -53,6 +53,11 @@ button {
   color: white;
 }
 
+label {
+  font-size: 10px;
+  color: red;
+}
+
 #login {
   padding: 20px;
   width: 420px;
