@@ -1,8 +1,6 @@
 export default document.addEventListener('DOMContentLoaded', function () {
     var form = document.getElementsByTagName('form')[0];
     // @ts-ignore
-    // let fields = document.getElementsByClassName('login-form__input')
-    // @ts-ignore
     form.onsubmit = validate;
     var email = form.getElementsByClassName('email')[0];
     var password = form.getElementsByClassName('password')[0];
@@ -10,7 +8,7 @@ export default document.addEventListener('DOMContentLoaded', function () {
     email.onblur = validateEmail;
     password.onblur = validatePassword;
     if (password2) {
-        password2.onblur = validatePassword;
+        password2.onblur = validateTwoPasswords;
     }
     email.onfocus = reset;
     password.onfocus = reset;
@@ -60,9 +58,17 @@ export default document.addEventListener('DOMContentLoaded', function () {
         }
         return match;
     }
-    function validateTwoPasswords() {
+    function validateTwoPasswords(e) {
         var passwordValue = password.value;
         var password2Value = password2.value;
+        if (e) {
+            if (passwordValue !== password2Value) {
+                makeRed(e);
+            }
+            else {
+                reset(e);
+            }
+        }
         return passwordValue === password2Value;
     }
     function makeRed(e) {
@@ -74,4 +80,4 @@ export default document.addEventListener('DOMContentLoaded', function () {
         el.style.border = "none";
     }
 });
-//# sourceMappingURL=LoginFormValidation.js.map
+//# sourceMappingURL=FormValidation.js.map

@@ -1,6 +1,9 @@
-import SignupFormTemplate from "./Signup.tmpl"
-import ReusableButton from '../../components/button/Button.tmpl'
+import SignupFormTemplate from "./Signup.tmpl.js"
+import ReusableButton from '../../components/button/Button.tmpl.js'
+import FormValidation from "../../utils/FormValidation/FormValidation.js"
 
+// @ts-ignore
+let form = FormValidation
 let btn = Handlebars.compile(ReusableButton)
 let template = Handlebars.compile(SignupFormTemplate);
 
@@ -8,7 +11,7 @@ let template = Handlebars.compile(SignupFormTemplate);
 const root = document.getElementById("app");
 // @ts-ignore
 root.innerHTML = template({
-    SignupButton: btn({href:"#", title:'Зарегистрироваться'})
+    SignupButton: btn({title:'Зарегистрироваться'})
 })
 
 

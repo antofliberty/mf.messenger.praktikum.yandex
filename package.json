@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "node index.js",
     "publish": "git push -u origin deploy",
-    "compile-js": "tsc --p ./ | rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components",
-    "mv-js": "rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components",
+    "compile-js": "tsc --p ./ | rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components | rsync -a dist/src/ts/utils/ public/utils",
+    "mv-js": "rsync -a dist/src/ts/pages/ public/pages | rsync -a dist/src/ts/components/ public/components | rsync -a dist/src/ts/utils/ public/utils",
     "compile-styles": "sass src/css/index.scss public/static/css/index.css",
     "watch-styles": "sass --watch src/css/index.scss public/static/css/index.css",
     "watch-js": "./node_modules/.bin/tsc-watch --onSuccess \"npm run mv-js\""
