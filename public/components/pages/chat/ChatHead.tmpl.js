@@ -1,3 +1,0 @@
-export var head = "<div class=\"head\">\n            <img src=\"https://dummyimage.com/72/72\" alt=\"\">\n            <h2 class=\"head__login\">{{ login }}</h2>\n            <div class=\"head__dialogs\">\n                <h2 class=\"head__dialogs__sign\">\u0414\u0438\u0430\u043B\u043E\u0433\u0438</h2>\n            </div>\n        </div>\n        <div>";
-export default head;
-//# sourceMappingURL=ChatHead.tmpl.js.map

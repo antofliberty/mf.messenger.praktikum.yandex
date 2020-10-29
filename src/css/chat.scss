@@ -19,7 +19,6 @@
 }
 
 .dialog {
-  /*border-right: 1px solid black;*/
   overflow-y: scroll;
   position: relative;
   text-align: right;
@@ -34,7 +33,6 @@
 .head__dialogs {
   margin-left: auto;
   width: calc(30% - 1px);
-  /*border-left: 1px solid black;*/
   font-size: 1.5rem;
   line-height: 72px;
 }
@@ -94,7 +92,32 @@ main {
   background: #eee;
 }
 
-.dialog__tools {
+.contact__name {
+  line-height: 40px;
+}
+
+.contacts-wrapper {
+  float: right;
+  width: 29.85%;
+  border-left: 1px solid #454138b0;
+}
+
+.dialog__tools-wrapper {
   width: 100%;
   height: 50px;
+}
+
+.dialog__tools {
+  padding: 5px;
+  display: flex;
+}
+
+.dialog__tools__text {
+  width: 80%;
+  margin: 0 7px;
+}
+
+.dialog-wrapper {
+  float:left;
+  width:70%;
 }

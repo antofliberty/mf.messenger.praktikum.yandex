@@ -2,22 +2,23 @@ import ChatTemplate from "./Chat.tmpl.js";
 import HeadTemplate from "./ChatHead.tmpl.js";
 
 
-Handlebars.registerHelper('isNotYou', function (value) {
+Handlebars.registerHelper("isNotYou", function (value) {
     return value !== "Вы";
 });
 
-let template = Handlebars.compile(ChatTemplate);
-let head = Handlebars.compile(HeadTemplate);
+const template = Handlebars.compile(ChatTemplate);
+const head = Handlebars.compile(HeadTemplate);
 
-let data = {
+const data = {
     user: "Mikhail Egorov",
     contacts: [
-        {id:'1', name:"Вася"},
-        {id:'2', name:"Коля"},
-        {id:'3', name: "Женя"}
+        { id:"1", name: "Вася" },
+        { id:"2", name: "Коля" },
+        { id:"3", name: "Женя" }
     ]
-}
-let messages = [
+};
+
+const messages = [
     {
         author: "Женя",
         message: "123"
@@ -29,14 +30,15 @@ let messages = [
 ];
 
 const root = document.getElementById("app");
-// @ts-ignore
-root.innerHTML = template({
-    head: head({
-        login: data.user
-    }),
-    contacts: data.contacts,
-    messages: messages
-})
 
+if (root) {
+    root.innerHTML = template({
+        head: head({
+            login: data.user
+        }),
+        contacts: data.contacts,
+        messages: messages
+    });
+}
 
 export default template
