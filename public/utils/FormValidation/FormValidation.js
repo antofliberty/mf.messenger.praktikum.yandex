@@ -73,11 +73,11 @@ export default document.addEventListener('DOMContentLoaded', function () {
     }
     function makeRed(e) {
         var el = e.target;
-        el.style.border = "1px solid red";
+        el.classList.add('border-red');
     }
     function reset(e) {
         var el = e.target;
-        el.style.border = "none";
+        el.classList.remove('border-red');
     }
 });
 //# sourceMappingURL=FormValidation.js.map
